@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap -->
+    <link href="app/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="app/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="app/js/bootstrap/bootstrap.min.js"></script>
+    <title>Mendit Node</title>
+</head>
+<body>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3 class="panel-title">Panel title</h3>
+      </div>
+        <div class="modal-body">
+          <form class="form-vertical">
+            <div class="form-group">
+              <label for="node_title">Idea</label>
+              <div>
+                <input type="text" name="node_title"/>
+              </div>
+            </div>
+
+            <div>
+                <label for="node_body">Please expand</label>
+                <div>
+                    <textarea name="node_body" rows="16">
+                    </textarea>
+                </div>
+            </div>
+          </form>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+</body>
+</html>
+

@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap -->
+    <link href="/app/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <title>Menditor</title>
+
+    <style>
+        body {
+            color: #d3d3d3;
+            font: 12pt arial;
+            background-color: #222222;
+        }
+
+        #mapwindow {
+            width: 1600px;
+            height: 800px;
+            border: 1px solid #444444;
+            background-color: #222222;
+        }
+    </style>
+
+    <script type="text/javascript" src="/app/js/viz/vis.js"></script>
+    <link href="/app/js/viz/vis.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/app/js/base.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/app/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/app/js/bootstrap/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+<p id="testplace">AAA</p>
+<div class="modal fade" id="editNodeModal" tabindex="-1" role="dialog" aria-labelledby="editNodeModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3>Mendit Node</h3>
+      </div>
+        <div class="modal-body">
+          <div class="form-vertical">
+            <div class="form-group">
+              <label for="node_title">Idea</label>
+              <div>
+                <input id="node_title" type="text" name="node_title"/>
+              </div>
+            </div>
+
+            <div>
+                <label for="node_body">Please expand</label>
+                <div>
+                    <textarea id="node_body" name="node_body" rows="16"></textarea>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="nodeTitlePrompt" tabindex="-1" role="dialog" aria-labelledby="nodeTitlePromptLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3>Mendit Node</h3>
+      </div>
+        <div class="modal-body">
+          <div class="form-vertical">
+            <div class="form-group">
+              <label for="node_title">Idea</label>
+              <div>
+                <input id="prompt_node_title" type="text" name="node_title"/>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="mapwindow"></div>
+<script type="text/javascript">
+    createNetwork("mapwindow");
+</script>
+</body>
+</html>
+
