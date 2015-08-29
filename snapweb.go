@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
-	"gopkg.in/qml.v1"
 	"net"
 	"net/http"
 	"os"
 	"sync"
+
+	"gopkg.in/qml.v1"
 
 	"github.com/hydrogen18/stoppableListener"
 )
@@ -22,6 +23,7 @@ WebView {
 `
 
 const serveAtPort = 52660
+const storagePath = "/tmp/shit"
 
 func main() {
 	stopServer := make(chan int)
@@ -41,8 +43,18 @@ func main() {
 func dataHandler(w http.ResponseWriter, r *http.Request) {
 	// TODO(perrito666) pass to appropriate handler for urls and respond in json
 	// TODO(perrito666) See how to handle POST
+	switch r.Method {
+	case "GET":
+
+	}
 	fmt.Fprintf(w, "Some data")
 	fmt.Print(r.URL.Path)
+}
+
+func handlePostNode() error {
+	// TODO(perrito666) make node id folder, inside node label json and node text file
+	// also add attachments somehow, most likely to the json and with resources folder.
+	return nil
 }
 
 func runAppServer(serverStopChan chan int, serverResultChan chan error) {
